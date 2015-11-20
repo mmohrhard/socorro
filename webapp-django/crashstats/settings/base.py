@@ -380,7 +380,7 @@ BROWSERID_VERIFY_CLASS = (
 )
 
 # For a more friendly Persona pop-up
-BROWSERID_REQUEST_ARGS = {'siteName': 'Mozilla Crash Reports'}
+BROWSERID_REQUEST_ARGS = {'siteName': 'LibreOffice Crash Reports (beta)'}
 
 # Default number of days a token lasts until it expires
 TOKENS_DEFAULT_EXPIRATION_DAYS = 90
