@@ -21,7 +21,7 @@ from socorro.external.postgresql.dbapi2_util import (
 
 
 _URL = (
-    'https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&short_'
+    'https://bugs.libreoffice.org/buglist.cgi?query_format=advanced&short_'
     'desc_type=allwordssubstr&short_desc=&long_desc_type=allwordssubstr&lo'
     'ng_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteb'
     'oard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&ke'
@@ -77,6 +77,7 @@ class BugzillaCronApp(BaseCronApp):
                 last_run = utc_now()
 
         # bugzilla runs on PST, so we need to communicate in its time zone
+        # TODO: this needs a better solution
         PST = tz.gettz('PST8PDT')
         last_run_formatted = last_run.astimezone(PST).strftime('%Y-%m-%d')
         query = self.config.query % last_run_formatted
