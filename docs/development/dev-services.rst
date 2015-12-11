@@ -92,7 +92,8 @@ Now you can actually install the packages:
     postgresql93-contrib postgresql93-devel subversion make rsync \
     subversion gcc-c++ python-devel python-pip mercurial nodejs-less \
     git libxml2-devel libxslt-devel java-1.7.0-openjdk python-virtualenv npm \
-    rabbitmq-server elasticsearch httpd mod_wsgi memcached daemonize
+    rabbitmq-server elasticsearch httpd mod_wsgi memcached daemonize \
+    libcurl-devel cyrus-sasl-devel
 
 Enable Apache on startup:
 ::
